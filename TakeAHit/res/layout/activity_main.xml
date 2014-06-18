@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundnotable"
+    android:gravity="top"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentBottom="true" >
+
+        <com.example.takeahit.BouncingImageView
+            android:id="@+id/donut3"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="33dp"
+            android:onClick="addHitCounter"
+            android:src="@drawable/donut2" />
+
+        <com.example.takeahit.BouncingImageView
+            android:id="@+id/donut1"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="addHitCounter"
+            android:src="@drawable/donut1" />
+
+        <com.example.takeahit.BouncingImageView
+            android:id="@+id/donut2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="18dp"
+            android:onClick="addHitCounter"
+            android:src="@drawable/donut3" />
+
+        <com.example.takeahit.BouncingEndImageView
+            android:id="@+id/angryface"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginBottom="22dp"
+            android:onClick="addHitCounter"
+            android:src="@drawable/angryface" />
+
+        <com.example.takeahit.BouncingImageView
+            android:id="@+id/donut4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@+id/donut3"
+            android:layout_marginLeft="94dp"
+            android:layout_toRightOf="@+id/angryface"
+            android:src="@drawable/donut3" />
+
+        <com.example.takeahit.BouncingImageView
+            android:id="@+id/donut5"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/donut2"
+            android:src="@drawable/donut2" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/stonerGuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/guy" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="101dp"
+        android:text="@string/count"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_toLeftOf="@+id/stonerGuy"
+        android:text="150"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number"
+        android:layout_alignBottom="@+id/number"
+        android:layout_alignLeft="@+id/timer"
+        android:text="Hits Taken: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
